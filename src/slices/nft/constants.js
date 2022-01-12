@@ -1,0 +1,1 @@
+export const NFT_AMOUNT_PER_FETCH = 20;

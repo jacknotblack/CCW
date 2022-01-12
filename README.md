@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# NFT Asset List and NFT Detail
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -39,32 +39,20 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Available route
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `/list`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This page displays your assets with infinite scroll. Each time it fetches 20 assets. Click on the asset and you will be redirect to the detail of the NFT.
 
-### Code Splitting
+### `/detail/[contract_address]/[token_id]`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This page displays the detail of an NFT. Click go back to get back to the last page or click permalink button to redirect to its permalink page.
 
-### Analyzing the Bundle Size
+## Known issues
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### MetaMask pending
 
-### Making a Progressive Web App
+If a user with metaMask extension opens the site and refresh page before neither connect nor reject, after refresh there will be an error `Request of type 'wallet_requestPermissions' already pending`. This now will be treated as rejection since we cannot know when or if the user will eventually connect / reject. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We might possibly hold and prompt user to respond on the extension.
