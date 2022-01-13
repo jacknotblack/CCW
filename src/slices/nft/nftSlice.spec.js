@@ -1,5 +1,5 @@
 import nftSliceReducer, {
-  setAccountReady,
+  setAccountInitialized,
   setAccount,
   fetchAssets,
   updateAssets,
@@ -11,7 +11,7 @@ import nftSliceReducer, {
 
 describe('counter reducer', () => {
   const initialState = {
-    isAccountReady: false,
+    isAccountInitialized: false,
     account: null,
     assets: [],
     isAssetsLoading: false,
@@ -24,9 +24,9 @@ describe('counter reducer', () => {
     expect(nftSliceReducer(undefined, { type: 'unknown' })).toEqual(initialState);
   });
 
-  it('should handle setAccountReady', () => {
-    const actual = nftSliceReducer(initialState, setAccountReady(true));
-    expect(actual.isAccountReady).toBe(true);
+  it('should handle setAccountInitialized', () => {
+    const actual = nftSliceReducer(initialState, setAccountInitialized(true));
+    expect(actual.isAccountInitialized).toBe(true);
   });
 
   it('should handle setAccount', () => {

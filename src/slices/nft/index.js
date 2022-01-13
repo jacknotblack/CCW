@@ -1,5 +1,4 @@
 import nftReducer, {
-  setAccountReady,
   setAccount,
   fetchAssets,
   updateAssets,
@@ -12,7 +11,6 @@ import { fetchAssetsEpic, fetchAssetEpic } from "./nftEpics";
 
 export { nftReducer };
 export {
-  setAccountReady,
   setAccount,
   fetchAssets,
   updateAssets,

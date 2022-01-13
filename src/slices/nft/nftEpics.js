@@ -28,6 +28,7 @@ export const fetchAssetsEpic = (action$, state$) => {
           }&owner=${state$.value.nft.account}`
         )
         .pipe(map((response) => updateAssets(response.assets)))
+        // TODO: handle exception
     )
   );
 };
@@ -44,6 +45,7 @@ export const fetchAssetEpic = (action$) => {
           `https://api.opensea.io/api/v1/asset/${contractAddress}/${tokenId}`
         )
         .pipe(map((response) => updateAssetDetail(response)))
+        // TODO: handle exception
     )
   );
 };

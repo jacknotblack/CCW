@@ -26,19 +26,19 @@ const AssetListContainer = styled.div`
 const List = () => {
   const dispatch = useDispatch();
 
-  const { isAccountReady } = useAccountReady();
+  const { isAccountInitialized } = useAccountInitialized();
 
   // initial fetch on mount and reset on unmount
   // pending until account is ready 
   useEffect(() => {
-    if (!isAccountReady) {
+    if (!isAccountInitialized) {
       return;
     }
     dispatch(fetchAssets());
     return () => {
       dispatch(resetAssets());
     };
-  }, [dispatch, isAccountReady]);
+  }, [dispatch, isAccountInitialized]);
 
   const { assets, isLoading, hasMore } = useNFTAssets();
 
