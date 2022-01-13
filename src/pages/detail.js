@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { useParams, useNavigate } from "react-router-dom";
 
 import { fetchAssetDetail, resetAssetDetail } from "../slices/nft";
-import { useNFTAssetDetail } from "./hooks";
+import { useNFTAssetDetail } from "../app/hooks";
 
 const DetailContainer = styled.div`
   display: flex;

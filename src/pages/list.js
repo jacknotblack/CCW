@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
 import { fetchAssets, resetAssets } from "../slices/nft";
-import { useNFTAssets, useAccountReady } from "./hooks";
+import { useNFTAssets, useAccountInitialized } from "../app/hooks";
 import NFTCard from "./NFTcard";
 
 const AssetListTitle = styled.h3`
