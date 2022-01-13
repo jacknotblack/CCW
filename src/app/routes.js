@@ -1,5 +1,5 @@
-import List from "./pages/list";
-import Detail from "./pages/detail";
+import List from "../pages/list";
+import Detail from "../pages/detail";
 
 // TODO: Add lazy load of components to fulfill code splitting
 // const MyComponent = lazy(() =>
