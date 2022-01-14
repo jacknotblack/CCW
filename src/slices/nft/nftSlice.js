@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { NFT_AMOUNT_PER_FETCH, DEFAULＴ_ACCOUNT_ADDRESS } from "./constants";
+import { NFT_AMOUNT_PER_FETCH, DEFAULT_ACCOUNT_ADDRESS } from "./constants";
 
 const initialState = {
   account: null,
@@ -16,7 +16,7 @@ export const nftSlice = createSlice({
   initialState,
   reducers: {
     setAccount: (state, action) => { 
-      state.account = action.payload || DEFAULＴ_ACCOUNT_ADDRESS;
+      state.account = action.payload || DEFAULT_ACCOUNT_ADDRESS;
     },
     /**
      * Assets list reducers
