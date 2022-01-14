@@ -9,7 +9,10 @@ import nftReducer, {
 } from "./nftSlice";
 import { fetchAssetsEpic, fetchAssetEpic } from "./nftEpics";
 
+// Reducer
 export { nftReducer };
+  
+// Action Creator
 export {
   setAccount,
   fetchAssets,
@@ -19,4 +22,6 @@ export {
   updateAssetDetail,
   resetAssetDetail,
 };
+  
+// Epic
 export { fetchAssetsEpic, fetchAssetEpic };

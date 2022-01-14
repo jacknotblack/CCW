@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { useParams, useNavigate } from "react-router-dom";
 
-import { fetchAssetDetail, resetAssetDetail } from "../slices/nft";
-import { useNFTAssetDetail } from "../app/hooks";
+import { fetchAssetDetail, resetAssetDetail } from "../../slices/nft";
+import { useNFTAssetDetail } from "../../app/hooks";
 
 const DetailContainer = styled.div`
   display: flex;

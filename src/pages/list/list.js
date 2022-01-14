@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useCallback, useMemo } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
-import { fetchAssets, resetAssets } from "../slices/nft";
-import { useNFTAssets, useAccountInitialized } from "../app/hooks";
+import { fetchAssets, resetAssets } from "../../slices/nft";
+import { useNFTAssets, useAccountInitialized } from "../../app/hooks";
 import NFTCard from "./NFTcard";
 
 const AssetListTitle = styled.h3`
